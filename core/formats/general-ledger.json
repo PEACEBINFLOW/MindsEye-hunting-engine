@@ -1,0 +1,11 @@
+{
+  "id": "general-ledger",
+  "name": "General Ledger / T-Accounts",
+  "region": ["International"],
+  "origin": { "period": "Historical practice", "note": "A collection of accounts classifying posted transactions by account." },
+  "theory": { "definition": "The general ledger organizes posted transactions into individual accounts.", "purpose": "It accumulates balances for checking and financial reporting.", "principles": ["Every posting is linked to a source record.", "Debits and credits retain their double-entry relationship."], "rules": ["Transfer each journal line to the named account.", "Keep debit and credit sides distinct.", "Balance or carry forward accounts according to the reporting period."], "equation_links": ["Assets = Liabilities + Equity"] },
+  "practical": { "layout": { "columns": ["Date", "Description", "Folio", "Debit", "Credit", "Balance"], "sides": ["Debit", "Credit"] }, "posting_steps": ["Open accounts for affected items.", "Post journal debits and credits.", "Calculate account balances.", "Use balances in the trial balance."], "example_template": { "accounts": ["Cash", "Owner capital", "Rent expense"], "entry_patterns": [{ "debit": "Cash", "credit": "Owner capital", "debitType": "asset", "creditType": "equity", "amount_range": [100, 900] }, { "debit": "Rent expense", "credit": "Cash", "debitType": "expense", "creditType": "asset", "amount_range": [20, 200] }] }, "common_errors": ["Posting one side only.", "Posting to the wrong account."], "exercise": { "prompt": "Post journal entries to the relevant T-accounts.", "answer_rule": "Each transaction must appear on both corresponding ledger accounts." } },
+  "impact": { "on_statements": ["Provides balances used in the trial balance and statements."], "on_equation": { "assets": "0", "liabilities": "0", "equity": "0" }, "on_decisions": ["Inspect individual account activity and balances."], "risk_if_wrong": ["Incomplete postings lead to incomplete account balances."] },
+  "depth": { "level_1": "Accounts group transaction postings by category.", "level_2": "Post each journal line, maintain both sides, and calculate the account balance.", "level_3": "Subsidiary ledgers may support control accounts; compare account-by-account detail to the chronological journal." },
+  "links": ["double-entry-journal", "trial-balance"], "confidence": "high", "needs_verification": []
+}

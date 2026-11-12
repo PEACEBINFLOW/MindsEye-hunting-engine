@@ -1,0 +1,13 @@
+{
+  "name": "accounting-space",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["client"],
+  "scripts": {
+    "test": "node --test core/test/*.test.js",
+    "build": "npm run build --workspace client",
+    "dev": "npm run dev --workspace client",
+    "start": "node app/server.js"
+  }
+}
